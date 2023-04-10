@@ -44,7 +44,8 @@ ScrollReveal({
   duration: 1000,
   delay: 200,
 });
-
+ScrollReveal().reveal(".home-content  h1", { origin: "left" });
+ScrollReveal().reveal(".home-content  p, .about-content", { origin: "right" });
 ScrollReveal().reveal(".home-content, .heading", { origin: "top" });
 ScrollReveal().reveal(
   ".home-img, .skills-container , .portfolio-box , .contact form",
@@ -52,15 +53,6 @@ ScrollReveal().reveal(
     origin: "bottom",
   }
 );
-
-ScrollReveal().reveal(".home-content  h1, .about-img,", {
-  origin: "left",
-});
-
-ScrollReveal().reveal(".home-content  p, .about-content,", {
-  origin: "right",
-});
-
 //================== typed js =================//
 
 const typed = new Typed(".multiple-text", {
@@ -70,3 +62,28 @@ const typed = new Typed(".multiple-text", {
   backDelay: 1000,
   loop: true,
 });
+
+function SendMail() {
+  const loadingAnimation = document.getElementById("loading-animation");
+  loadingAnimation.style.display = "flex";
+  // Check if required fields are not empty
+  const fullName = document.getElementById("fullName").value;
+  const emailId = document.getElementById("email_id").value;
+  const message = document.getElementById("message").value;
+  if (fullName === "" || emailId === "" || message === "") {
+    alert("Zəhmət olmasa bütün  xanaları doldurun.");
+    overlay.style.display = "none";
+    return;
+  }
+
+  var params = {
+    from_name: fullName,
+    email_id: emailId,
+    message: message,
+  };
+  emailjs.send("service_hf7jxc8", "template_r3bc60t", params).then(() => {
+    setTimeout(() => {
+      loadingAnimation.style.display = "none";
+    }, 2000);
+  });
+}

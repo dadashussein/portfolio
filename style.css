@@ -1,4 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700&display=swap');
+@font-face {
+    font-family: Gumela;
+    src: url('./font/Gumela\ Regular.otf');
+}
 
 * {
     margin: 0;
@@ -19,11 +22,12 @@
 
 html {
     font-size: 62.5%;
+    font-weight: 400;
     overflow-x: hidden;
 }
 
 body {
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Gumela', sans-serif;
     background: var(--bg-color);
     color: var(--text-color);
 }
@@ -67,7 +71,38 @@ ul {
     box-shadow: none;
 }
 
+/* send  animation start  */
+#loading-animation {
+    position: fixed;
+    font-size: 20px;
+    gap: 2rem;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.2);
+    border-top-color: var(--main-color);
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
 
+  /* send animation end  */
 
 /************************************************* header design start **************************************/
 .header {
@@ -77,7 +112,6 @@ ul {
     width: 100%;
     padding: 2rem 9%;
     background: var(--bg-color);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -88,11 +122,9 @@ ul {
     border-bottom: .1rem solid rgba(0, 0, 0, .2);
 }
 
-
-
 .logo img {
     position: absolute;
-    top: -2.7rem;
+    top: -2rem;
     width: 150px;
     height: 150px;
 }
@@ -115,20 +147,17 @@ ul {
     display: none;
 }
 
-
 /************************************************* home design start **************************************/
 
 .home {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .home-img img {
     width: 30vw;
     border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-
 }
 
 .home-content h3 {
@@ -146,7 +175,6 @@ span {
 
 .home-content h1 {
     font-size: 5.6rem;
-
 }
 
 .home-content p {
@@ -179,12 +207,12 @@ span {
 .heading {
     text-align: center;
     font-size: 4.5rem;
-
 }
 
-
-
 /***************************************************************** skils  start***************************************/
+.skills {
+    background: var(--second-bg-color);
+}
 
 .skills h3 {
     margin-bottom: 2.5rem;
@@ -201,7 +229,7 @@ span {
 
 .skills-container .skills-box {
     flex: 1 1 10rem;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     margin-top: 2rem;
     padding: 1.5rem 2rem 4rem;
     border-radius: 2rem;
@@ -211,7 +239,6 @@ span {
 }
 
 .skills-data {
-
     margin-bottom: 3rem;
 }
 
@@ -248,8 +275,7 @@ span {
 /***************************************************************** portfolio desgin start  ***************************************/
 
 .portfolio {
-    background: var(--second-bg-color);
-
+    background: var(--bg-color);
 }
 
 .portfolio h2 {
@@ -287,15 +313,22 @@ span {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    background-color: rgba(245, 131, 0, 0.797);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    border: 2px solid #fff;
+    border-radius: 2rem;
     text-align: center;
     padding: 0 4rem;
     transform: translateY(100%);
-    transition: .5s ease;
+    transition: .4s ease;
+}
+
+.portfolio-links {
+    display: flex;
+    gap: 2rem;
 }
 
 .portfolio-box:hover .portfolio-layer {
@@ -307,7 +340,7 @@ span {
 }
 
 .portfolio-layer p {
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     margin: .3rem 0 1rem;
 }
 
@@ -315,11 +348,10 @@ span {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 5rem;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
     background: var(--text-color);
     border-radius: 50%;
-
 }
 
 .portfolio-layer a i {
@@ -330,11 +362,12 @@ span {
 
 /************************************************* contact design start **************************************/
 
-
+.contact {
+    background: var(--second-bg-color);
+}
 
 .contact h2 {
     margin-bottom: 3rem;
-
 }
 
 .contact form {
@@ -356,7 +389,7 @@ span {
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
 }
@@ -384,7 +417,7 @@ span {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--second-bg-color);
+    background: var(--bg-color);
 }
 
 .footer-text p {
@@ -411,6 +444,7 @@ span {
     font-size: 2.4rem;
     color: var(--second-bg-color);
 }
+
 
 
 /************************************************* BREAKPOINTS **************************************/
@@ -524,9 +558,16 @@ span {
 }
 
 @media (max-width: 450px) {
+
     html {
         font-size: 50%;
     }
+    #overlay p {
+        font-size: 2rem;
+        top: 20%;
+        left: 30%;
+    }
+    
 
     .contact form .input-box input {
         width: 100%;

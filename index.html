@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="az">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image" href="./images/myLogo.png" />
@@ -17,12 +17,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!----- after message sent ------>
+    <div id="loading-animation">
+      <div class="spinner"></div>
+      <p>Göndərilir...</p>
+    </div>
+
     <!------------------------------------------------ header start --------------------------------->
     <header class="header">
       <div class="logo">
         <img src="./images/logo.png" alt="code-logo" />
       </div>
       <i class="bx bx-menu" id="menu-icon"></i>
+
       <nav class="navbar">
         <a href="#home" class="active">Ana səhifə</a>
         <a href="#skills">Bacarıqlar</a>
@@ -35,17 +42,16 @@
     <section class="home" id="home">
       <div class="home-content">
         <h3>Salam, xoş gəlmisiniz!</h3>
-        <h1>Dadash Hussein</h1>
+        <h1>Mən Dadaş Hüseynzadə</h1>
         <h3><span class="multiple-text"></span></h3>
         <p>
-          Salam, xoş gəlmisiniz! Mən front-end tərtibatçı olaraq əsas
-          prioritetim, sizin biznes göstəricilərinizi tam lazımi şəkildə
-          müştərilərə təmsil etməkdir. Bu istər dinamik baxımdan , istərsə də
-          dizayn baxımından olsun. Bunu mümkün olan ən yaxşı şəkildə etmək üçün
-          müasir texnologiyalardan istifadə edirəm. Bu texnologiyalara
-          bacarıqlarım bölümündə baxa bilərsiniz. Əgər kod səliqəsinə baxmaq
-          istəsəniz proyektlərimin bəzilərini açıq şəkildə qaynaq kodları ilə
-          paylaşmışam.
+          Front-end tərtibatçı olaraq əsas məqsədim, sizin şirkətin məhsullarını
+          tam lazımi şəkildə müştərilərə təmsil etməkdir. Bu istər dinamik
+          baxımdan , istərsə də dizayn baxımından olsun. Bunu mümkün olan ən
+          yaxşı şəkildə etmək üçün müasir texnologiyalardan istifadə edirəm. Bu
+          texnologiyalara bacarıqlarım bölməsində baxa bilərsiniz. Əgər kod
+          səliqəsinə baxmaq istəsəniz proyektlərimin bəzilərini açıq şəkildə
+          qaynaq kodları ilə paylaşmışam.
         </p>
         <div class="social-media">
           <a href="https://twitter.com/dadashussein" target="_blank"
@@ -116,48 +122,87 @@
         <div class="portfolio-box">
           <img src="images/movie.png" alt="" />
           <div class="portfolio-layer">
-            <h4>Movie App</h4>
+            <h4>Film tətbiqi</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
-              nostrum.
+              Layihədə HTML, CSS və JavaScript kimi front-end texnologiyaları
+              ilə yanaşı REST API, back-end ilə işləmək bacarıqlarımı da nümayiş
+              etdirmişəm. Əsas səhifə, film siyahısı, film təfərrüat səhifəsi,
+              film adına görə axtarış səhifəsi kimi müxtəlif səhifələr var.
             </p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
+            <div class="portfolio-links">
+              <a href="https://film-web-site.vercel.app/" target="_blank"
+                ><i class="bx bx-link-external"></i
+              ></a>
+              <a
+                href="https://github.com/dadashussein/film-web-site"
+                target="_blank"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
           </div>
         </div>
 
         <div class="portfolio-box">
           <img src="images/news.png" alt="" />
           <div class="portfolio-layer">
-            <h4>News App</h4>
+            <h4>Xəbərlər tətbiqi</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
-              nostrum.
+              Tərtibat aləti kimi Vite istifadə olunub. Routor və dinamik
+              URL-lər üçün react-router-dom və useParams tətbiq edilib.
+              Xəbərləri kateqoriyaya görə nəzərdən keçirin, məqalələri oxuyun.
             </p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
+            <div class="portfolio-links">
+              <a href="https://news-clon.vercel.app/" target="_blank"
+                ><i class="bx bx-link-external"></i
+              ></a>
+              <a
+                href="https://github.com/dadashussein/news-clon"
+                target="_blank"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
           </div>
         </div>
 
         <div class="portfolio-box">
           <img src="images/food.png" alt="" />
           <div class="portfolio-layer">
-            <h4>Food</h4>
+            <h4>Wolt Klon</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
-              nostrum.
+              Bu proyektı heç bir JavaScript kitabxanası olmadan pure-code
+              olaraq yazmışam. Burdakı məqsədim JavaScript bacarıqlarımı inkişaf
+              elətdirməkdir.
             </p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
+            <div class="portfolio-links">
+              <a href="https://wult.vercel.app/" target="_blank"
+                ><i class="bx bx-link-external"></i
+              ></a>
+              <a href="https://github.com/dadashussein/wult" target="_blank"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
           </div>
         </div>
 
         <div class="portfolio-box">
           <img src="images/ecommerse.png" alt="" />
           <div class="portfolio-layer">
-            <h4>Movie App</h4>
+            <h4>E-kommersiya saytı</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
-              nostrum.
+              Bu layihəmdə əsas məqsəd e-commerce saytları ilə React
+              bacarıqlarımı inkişaf elətdirmək olub. Seçdiyiniz malın səbətə
+              əlavə olunması, daha təfərrüatlı baxmaq və s.
             </p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
+            <div class="portfolio-links">
+              <a href="https://e-commerse-six.vercel.app/" target="_blank"
+                ><i class="bx bx-link-external"></i
+              ></a>
+              <a
+                href="https://github.com/dadashussein/e-commerse"
+                target="_blank"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
           </div>
         </div>
 
@@ -166,10 +211,24 @@
           <div class="portfolio-layer">
             <h4>Weather App</h4>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
-              nostrum.
+              Bu proyekt, istifadəçilərə müəyyən bir məkan üçün hava
+              məlumatlarını əldə etməyə imkan verən hava API-sidir.
+              İstifadəçilər yerlərini daxil edərək cari hava şəraiti,
+              temperatur, rütubət, küləyin sürəti və digər meteoroloji
+              məlumatları əldə edə bilərlər.
             </p>
-            <a href="#"><i class="bx bx-link-external"></i></a>
+            <div class="portfolio-links">
+              <a
+                href="https://weather-api-gamma-blush.vercel.app/"
+                target="_blank"
+                ><i class="bx bx-link-external"></i
+              ></a>
+              <a
+                href="https://github.com/dadashussein/weather-api"
+                target="_blank"
+                ><i class="bx bxl-github"></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
@@ -179,23 +238,22 @@
 
     <section class="contact" id="contact">
       <h2 class="heading">Mənimlə <span>Əlaqə</span></h2>
-      <form action="#">
+      <form action="#" onsubmit="SendMail()">
         <div class="input-box">
-          <input type="text" placeholder="Ad" />
-          <input type="email" placeholder="Email" />
+          <input type="text" id="fullName" placeholder="Ad" required />
+          <input type="email" id="email_id" placeholder="Email" required />
         </div>
-        <div class="input-box">
-          <input type="number" placeholder="Mobil  Nömrə" />
-          <input type="text" placeholder="Email Mövzusu" />
-        </div>
+
         <textarea
-          name=""
-          id=""
           cols="30"
+          id="message"
           rows="10"
           placeholder="Sizin mesajınız"
+          required
         ></textarea>
-        <input type="submit" value="Göndər" class="btn" />
+        <button onclick="SendMail()" type="submit" value="Göndər" class="btn">
+          Göndər
+        </button>
       </form>
     </section>
 
@@ -216,6 +274,17 @@
 
     <!-------------- typed js ------------------->
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+
+    <!-- email service -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("aunvuseaEqORL-6fK");
+      })();
+    </script>
 
     <!---------------- custom js ---------------->
     <script src="script.js"></script>
