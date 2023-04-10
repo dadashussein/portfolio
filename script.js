@@ -84,6 +84,6 @@ function SendMail() {
   emailjs.send("service_hf7jxc8", "template_r3bc60t", params).then(() => {
     setTimeout(() => {
       loadingAnimation.style.display = "none";
-    }, 2000);
+    }, 3000);
   });
 }

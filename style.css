@@ -85,24 +85,24 @@ ul {
     display: none;
     justify-content: center;
     align-items: center;
-  }
-  
-  .spinner {
+}
+
+.spinner {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border: 4px solid rgba(255, 255, 255, 0.2);
     border-top-color: var(--main-color);
     animation: spin 1s ease-in-out infinite;
-  }
-  
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
+}
 
-  /* send animation end  */
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* send animation end  */
 
 /************************************************* header design start **************************************/
 .header {
@@ -201,8 +201,6 @@ span {
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
 }
-
-
 
 .heading {
     text-align: center;
@@ -562,12 +560,17 @@ span {
     html {
         font-size: 50%;
     }
+
+    ::-webkit-scrollbar {
+        width: 2px;
+    }
+
     #overlay p {
         font-size: 2rem;
         top: 20%;
         left: 30%;
     }
-    
+
 
     .contact form .input-box input {
         width: 100%;
